@@ -1,0 +1,3 @@
+error rate : 0.0
+数值类型rmse: NaN
+rmse total: 0.0
