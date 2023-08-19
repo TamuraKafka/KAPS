@@ -1,3 +1,5 @@
+# Dictionary Explaination
+
 | Dictionary | Describution        |
 |------------|---------------------|
 | CATD       | Baseline CATD Code  |
@@ -10,6 +12,7 @@
 | datasets   | All of the Datasets |
 
 
+# Experiment Code
 All experiments that need to use the Kars algorithm need to use the experimental data set, through the Kars algorithm to calculate the results, and then put the calculated results into the corresponding experimental code to draw the experimental results map. The data sets needed for each experiment and the drawing code for that experiment are as follows:
 
 1. Effectiveness on Groundtruth Inference with Varying Redundancy.
@@ -38,4 +41,24 @@ All experiments that need to use the Kars algorithm need to use the experimental
 - Figure(a): The Code is located in the directory: "EM/DataGraph/label_distribution.py"
 - Figure(b): This result leads us to the result of running the "Gephi" software with the dataset: "datasets/QuantitativeCrowdsourcing/TwitterDatasets/Twitter_394t_46486w/G_Twitter1.csv" and "datasets/QuantitativeCrowdsourcing/TwitterDatasets/Twitter_394t_46486w/H_Twitter1.csv"
 
+# Dataset Introduction
+We have collected three datasets from [Douban](https://www.douban.com/)、[GoodReads](https://www.goodreads.com/), and [Twitter](https://twitter.com/) using web crawlers.
 
+Douban: We collected and organized the long review information (1-5 points) of the Top 250 movies and the social relationship attributes between the commenting users. We also used the expert ratings of movies from [metacritic](https://www.metacritic.com/) as the ground truth for this dataset.
+
+GoodReads: We collected and organized some user reviews (1-5 points) from the 2022 Best Books list and the social relationship attributes between the commenting users. The ground truth for this dataset is the average rating of the authors.
+
+Twitter: In this dataset, we crawled and organized comments under President Biden’s tweets on political topics and the social relationships between commenting users. We used a Bert model to score the sentiment of the comments, with an output value in the range of [0,1]. The larger the value, the more positive it is, and vice versa.
+
+We have classified the datasets into two folders: complete_dataset and split_dataset.
+
+The attributes of the complete dataset are shown in the table below:
+| Dataset name  | items  | workers  | labels  | social connections  |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| Douban  |  202 |  269266 | 437478  | 2340905  |
+|  GoodReads | 309  | 120415  | 224837  | 293298  |
+|  Twitter | 394  | 46486  | 63265  | 1065302  |
+
+The complete datasets for Douban, GoodReads, and Twitter are stored in the complete_dataset folder. Only the split datasets for Douban and GoodReads are stored in the split_dataset folder. The splitting rule is to gradually increase worker redundancy from 3 to 15 for each task, with priority given to workers with high social influence. The calculation of social influence is as follows: social influence = (degree of node +1) / total number of nodes.
+
+The description of each file and column in each dataset i
