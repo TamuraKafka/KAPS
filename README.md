@@ -62,3 +62,16 @@ The attributes of the complete dataset are shown in the table below:
 The complete datasets for Douban, GoodReads, and Twitter are stored in the complete_dataset folder. Only the split datasets for Douban and GoodReads are stored in the split_dataset folder. The splitting rule is to gradually increase worker redundancy from 3 to 15 for each task, with priority given to workers with high social influence. The calculation of social influence is as follows: social influence = (degree of node +1) / total number of nodes.
 
 The description of each file and column in each dataset i
+
+The description of each file and column in each dataset is as follows:
+
+* E.csv: Social influence file (worker id, social influence)
+* G.csv: Social relationship file (follower, fan)
+* T.csv: Task category file (each column represents a category, if it is equal to one then it belongs to that category)
+* truth.csv: Ground truth file (task id, ground truth)
+* Y.csv: Worker task file (worker id, task id, label)
+* Y2.csv: Worker task file (worker id, task id, label, ground truth)
+* result_a.csv: This file is the result of the code running, and we will put the result of the code running here to facilitate the relevant experiment. This file has nothing to do with the lab setup and is for my own use only.
+* result_h.csv: This file is the result of the code running, and we will put the result of the code running here to facilitate the relevant experiment. This file has nothing to do with the lab setup and is for my own use only.
+* result_phi.csv: This file is the result of the code running, and we will put the result of the code running here to facilitate the relevant experiment. This file has nothing to do with the lab setup and is for my own use only.
+* result_R.csv: This file is the result of the code running, and we will put the result of the code running here to facilitate the relevant experiment. This file has nothing to do with the lab setup and is for my own use only.
