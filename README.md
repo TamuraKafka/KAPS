@@ -8,7 +8,7 @@
 | I_LFCount  | Baseline LFC Code   |
 | PM_CRH     | Baseline CRH Code   |
 | CTD        | Baseline CTD Code   |
-| EM         | KARS Code           |
+| KARS       | KARS Code           |
 | datasets   | All of the Datasets |
 
 
@@ -75,3 +75,4 @@ The description of each file and column in each dataset is as follows:
 * result_h.csv: This file is the result of the code running, and we will put the result of the code running here to facilitate the relevant experiment. This file has nothing to do with the lab setup and is for my own use only.
 * result_phi.csv: This file is the result of the code running, and we will put the result of the code running here to facilitate the relevant experiment. This file has nothing to do with the lab setup and is for my own use only.
 * result_R.csv: This file is the result of the code running, and we will put the result of the code running here to facilitate the relevant experiment. This file has nothing to do with the lab setup and is for my own use only.
+* t2lpd.csv: This file is applied in part of the drawing code for the predicted values for each task. If you need to reproduce the implementation, you need to regenerate the file from the corresponding data set.

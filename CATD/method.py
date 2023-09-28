@@ -126,7 +126,7 @@ class Conf_Aware:
 
 
 ###################################
-# The above is the EM method (a class)
+# The above is the KARS method (a class)
 # The following are several external functions
 ###################################
 
