@@ -11,11 +11,11 @@
 | KARS       | KARS Code           |
 | datasets   | All of the Datasets |
 
-## Dictionary Detials in KARS
+## KARS Dictionary Detials 
 ```
 KARS
 ├─BaselineExperiment ----- This folder contains the code associated with baseline running
-│      LaunchBaseline.py ----- This file is a one-click script to launch all baseline code (except CTD), enter the data set and run this file to get the results of all baseline (except CTD) on the data set.
+│      LaunchBaseline.py ----- This file is a one-click script to launch all baseline code (except CTD), enter the dataset and run this file to get the results of all baseline (except CTD) on the dataset.
 │      result_baseline.txt ----- File storing baseline running results
 │      
 ├─DataGraph ----- Figure Code: The code for drawing the experimental results into graphics is stored here: the running result data related to the experiment needs to be input into it to get the graphical result display of the experiment.
