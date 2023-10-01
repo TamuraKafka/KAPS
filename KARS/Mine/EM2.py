@@ -794,7 +794,7 @@ if __name__ == "__main__":
     # data_name = "GoodReadsDatasets_RedundancyCut/GoodReads_309t_245w_3r"
 
 
-    # data_name = "GoodReadsDatasets_SWTest/GoodReads_5702_309t"
+    # data_name = "GoodReadsDatasets_SWTest/GoodReads_5702_309t_0%"
     #
     # output_file_path = '../../datasets/QuantitativeCrowdsourcing/'+data_name+'/'
     # data_file = '../../datasets/QuantitativeCrowdsourcing/'+data_name+'/Y.csv'
@@ -860,30 +860,30 @@ if __name__ == "__main__":
     #                   "GoodReadsDatasets_RedundancyCut/GoodReads_309t_1227w_14r",
     #                   "GoodReadsDatasets_RedundancyCut/GoodReads_309t_1312w_15r"]
 
-    # DataNameValues = ["DouBanDatasets_SWTest/Douban_3635w",
-    #                   "DouBanDatasets_SWTest/Douban_3998w",
-    #                   "DouBanDatasets_SWTest/Douban_4362w",
-    #                   "DouBanDatasets_SWTest/Douban_4725w",
-    #                   "DouBanDatasets_SWTest/Douban_5089w",
-    #                   "DouBanDatasets_SWTest/Douban_5452w",
-    #                   "DouBanDatasets_SWTest/Douban_5816w",
-    #                   "DouBanDatasets_SWTest/Douban_6179w",
-    #                   "DouBanDatasets_SWTest/Douban_6543w",
-    #                   "DouBanDatasets_SWTest/Douban_6906w",
-    #                   "DouBanDatasets_SWTest/Douban_7271w"]
+    # DataNameValues = ["DouBanDatasets_SWTest/Douban_3635w_50%",
+    #                   "DouBanDatasets_SWTest/Douban_3998w_45%",
+    #                   "DouBanDatasets_SWTest/Douban_4362w_40%",
+    #                   "DouBanDatasets_SWTest/Douban_4725w_35%",
+    #                   "DouBanDatasets_SWTest/Douban_5089w_30%",
+    #                   "DouBanDatasets_SWTest/Douban_5452w_25%",
+    #                   "DouBanDatasets_SWTest/Douban_5816w_20%",
+    #                   "DouBanDatasets_SWTest/Douban_6179w_15%",
+    #                   "DouBanDatasets_SWTest/Douban_6543w_10%",
+    #                   "DouBanDatasets_SWTest/Douban_6906w_5%",
+    #                   "DouBanDatasets_SWTest/Douban_7271w_0%"]
 
 
-    DataNameValues = ["GoodReadsDatasets_SWTest/GoodReads_5702_309t",
-                      "GoodReadsDatasets_SWTest/GoodReads_5415_309t",
-                      "GoodReadsDatasets_SWTest/GoodReads_5130_309t",
-                      "GoodReadsDatasets_SWTest/GoodReads_4845_309t",
-                      "GoodReadsDatasets_SWTest/GoodReads_4560_309t",
-                      "GoodReadsDatasets_SWTest/GoodReads_4275_309t",
-                      "GoodReadsDatasets_SWTest/GoodReads_3990_309t",
-                      "GoodReadsDatasets_SWTest/GoodReads_3705_309t",
-                      "GoodReadsDatasets_SWTest/GoodReads_3420_308t",
-                      "GoodReadsDatasets_SWTest/GoodReads_3135_308t",
-                      "GoodReadsDatasets_SWTest/GoodReads_2850_308t"]
+    DataNameValues = ["GoodReadsDatasets_SWTest/GoodReads_5702_309t_0%",
+                      "GoodReadsDatasets_SWTest/GoodReads_5415_309t_5%",
+                      "GoodReadsDatasets_SWTest/GoodReads_5130_309t_10%",
+                      "GoodReadsDatasets_SWTest/GoodReads_4845_309t_15%",
+                      "GoodReadsDatasets_SWTest/GoodReads_4560_309t_20%",
+                      "GoodReadsDatasets_SWTest/GoodReads_4275_309t_25%",
+                      "GoodReadsDatasets_SWTest/GoodReads_3990_309t_30%",
+                      "GoodReadsDatasets_SWTest/GoodReads_3705_309t_35%",
+                      "GoodReadsDatasets_SWTest/GoodReads_3420_308t_40%",
+                      "GoodReadsDatasets_SWTest/GoodReads_3135_308t_45%",
+                      "GoodReadsDatasets_SWTest/GoodReads_2850_308t_50%"]
 
     # DataNameValues = ["DouBanDatasets/Douban_202t_269266w","GoodReadsDatasets/GoodReads_309t_120415w"]  # douban 完整  # GoodReads 完整
 
