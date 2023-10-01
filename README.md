@@ -1,7 +1,7 @@
 # Project Structure Dntroduction
 Through directory explanation, we can quickly understand the structure of the entire project.
 
------
+
 | Dictionary | Describution                 |
 |------------|------------------------------|
 | CATD       | Baseline CATD Algorithm Code |
@@ -12,7 +12,7 @@ Through directory explanation, we can quickly understand the structure of the en
 | CTD        | Baseline CTD Algorithm Code  |
 | KARS       | KARS Algorithm Code          |
 | datasets   | All of the Datasets Files    |
-------
+
 ### KARS Dictionary Detials 
 The KARS algorithm is the algorithm we proposed in the paper. In order to adapt to different data set formats, we store two different forms of KARS algorithm codes in this directory. The core algorithms of the two codes are the same, but they are adapted to different data set formats.
 ```
@@ -36,7 +36,7 @@ KARS
 
 
 
-
+-----
 # Experimental Code Introduction
 All experiments that need to use the KARS algorithm need to use the experimental data set, calculate the results through the KARS algorithm, and then put the calculation results into the corresponding experimental code to draw the experimental result graph. The dataset required for each experiment and the plotting code for that experiment are as follows:
 
@@ -54,7 +54,7 @@ The code of Baseline CATD、GTM、KDEm、LFC、CRH  can be run by a startup scri
 
 Since the algorithm code for CTD is written in Java, we package each dataset and the CTD algorithm into a jar package, running the corresponding jar package can calculate the corresponding results, these jar packages are located at: "CTD", and the corresponding calculated output is located at: "CTD/log/Tri/CTD/weather/parameter"
 
------
+
 
 ## Introduction to datasets and drawing codes for specific experiments
 
@@ -136,6 +136,7 @@ The description of each file and column in each dataset is as follows:
 * **result_R.csv**: This file is the result of the code running, and we will put the result of the code running here to facilitate the relevant experiment. This file has nothing to do with the lab setup and is for my own use only.
 * **t2lpd.csv**: This file is applied in part of the drawing code for the predicted values for each task. If you need to reproduce the implementation, you need to regenerate the file from the corresponding dataset.
 
+-----
 # More Detilas in Dataset Introduction
 All of our dataset files in the folder datasets/QuantitativeCrowdsourcing, this folder has 7 subfolders, represent the 7 different datasets, and each has a markdown readme file folder, Used to explain the details of this folder dataset. For ease of reading, I have organized the introduction documentation of these datasets as follows:
 ## Dataset DouBanDatasets/Douban_202t_269266w  Describption:
