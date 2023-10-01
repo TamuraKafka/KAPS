@@ -65,17 +65,17 @@ The description of each file and column in each dataset i
 
 The description of each file and column in each dataset is as follows:
 
-* E.csv: Social influence file (worker id, social influence)
-* G.csv: Social relationship file (follower, fan)
-* T.csv: Task category file (each column represents a category, if it is equal to one then it belongs to that category)
-* truth.csv: Ground truth file (task id, ground truth)
-* Y.csv: Worker task file (worker id, task id, label)
-* Y2.csv: Worker task file (worker id, task id, label, ground truth)
-* result_a.csv: This file is the result of the code running, and we will put the result of the code running here to facilitate the relevant experiment. This file has nothing to do with the lab setup and is for my own use only.
-* result_h.csv: This file is the result of the code running, and we will put the result of the code running here to facilitate the relevant experiment. This file has nothing to do with the lab setup and is for my own use only.
-* result_phi.csv: This file is the result of the code running, and we will put the result of the code running here to facilitate the relevant experiment. This file has nothing to do with the lab setup and is for my own use only.
-* result_R.csv: This file is the result of the code running, and we will put the result of the code running here to facilitate the relevant experiment. This file has nothing to do with the lab setup and is for my own use only.
-* t2lpd.csv: This file is applied in part of the drawing code for the predicted values for each task. If you need to reproduce the implementation, you need to regenerate the file from the corresponding data set.
+* **E.csv**: Social influence file (worker id, social influence)
+* **G.csv**: Social relationship file (follower, fan)
+* **T.csv**: Task category file (each column represents a category, if it is equal to one then it belongs to that category)
+* **truth.csv**: Ground truth file (task id, ground truth)
+* **Y.csv**: Worker task file (worker id, task id, label)
+* **Y2.csv**: Worker task file (worker id, task id, label, ground truth)
+* **result_a.csv**: This file is the result of the code running, and we will put the result of the code running here to facilitate the relevant experiment. This file has nothing to do with the lab setup and is for my own use only.
+* **result_h.csv**: This file is the result of the code running, and we will put the result of the code running here to facilitate the relevant experiment. This file has nothing to do with the lab setup and is for my own use only.
+* **result_phi.csv**: This file is the result of the code running, and we will put the result of the code running here to facilitate the relevant experiment. This file has nothing to do with the lab setup and is for my own use only.
+* **result_R.csv**: This file is the result of the code running, and we will put the result of the code running here to facilitate the relevant experiment. This file has nothing to do with the lab setup and is for my own use only.
+* **t2lpd.csv**: This file is applied in part of the drawing code for the predicted values for each task. If you need to reproduce the implementation, you need to regenerate the file from the corresponding data set.
 
 # More Detilas in Dataset Introduction
 All of our data set files in the folder datasets/QuantitativeCrowdsourcing, this folder has 7 subfolders, represent the 7 different data sets, and each has a markdown readme file folder, Used to explain the details of this folder data set. For ease of reading, I have organized the introduction documentation of these data sets as follows:
