@@ -13,28 +13,28 @@
 
 
 # Experiment Code
-All experiments that need to use the Kars algorithm need to use the experimental data set, through the Kars algorithm to calculate the results, and then put the calculated results into the corresponding experimental code to draw the experimental results map. The data sets needed for each experiment and the drawing code for that experiment are as follows:
+All experiments that need to use the Kars algorithm need to use the experimental dataset, through the Kars algorithm to calculate the results, and then put the calculated results into the corresponding experimental code to draw the experimental results map. The datasets needed for each experiment and the drawing code for that experiment are as follows:
 
 1. Effectiveness on Groundtruth Inference with Varying Redundancy.
 - The KARS Code is located in the directory: "EM/DataGraph/data_3r_15r_dataset.py"
 - The KARS dataset for this experiment is located in "datasets/QuantitativeCrowdsourcing/DouBanDatasets_RedundancyCut" and "datasets/QuantitativeCrowdsourcing/GoodReadsDatasets_RedundancyCut"
 - The code of Baseline CATD、GTM、KDEm、LFC、CRH  can be run by a startup script I wrote in the dictionary "EM/BaselineExperiment/LaunchBaseline.py"   
-- Since the algorithm code for CTD is written in Java, we package each data set and the CTD algorithm into a jar package, running the corresponding jar package can calculate the corresponding results, these jar packages are located at: "CTD", and the corresponding calculated output is located at: "CTD/log/Tri/CTD/weather/parameter"
+- Since the algorithm code for CTD is written in Java, we package each dataset and the CTD algorithm into a jar package, running the corresponding jar package can calculate the corresponding results, these jar packages are located at: "CTD", and the corresponding calculated output is located at: "CTD/log/Tri/CTD/weather/parameter"
 
 
 2. Effectiveness of Kindness.
 - The Code is located in the directory: "EM/DataGraph/model_bias.py"
-- The data set for this experiment is located in "datasets/QuantitativeCrowdsourcing/DouBanDatasets/Douban_202t_269266w" and "datasets/QuantitativeCrowdsourcing/GoodReadsDatasets/GoodReads_309t_120415w"
+- The dataset for this experiment is located in "datasets/QuantitativeCrowdsourcing/DouBanDatasets/Douban_202t_269266w" and "datasets/QuantitativeCrowdsourcing/GoodReadsDatasets/GoodReads_309t_120415w"
 
 
 3. Effectiveness of Preferences.
 - The Code is located in the directory: "EM/DataGraph/model_bias.py"
-- The data set for this experiment is located in "datasets/QuantitativeCrowdsourcing/DouBanDatasets/Douban_202t_269266w" and "datasets/QuantitativeCrowdsourcing/GoodReadsDatasets/GoodReads_309t_120415w"
+- The dataset for this experiment is located in "datasets/QuantitativeCrowdsourcing/DouBanDatasets/Douban_202t_269266w" and "datasets/QuantitativeCrowdsourcing/GoodReadsDatasets/GoodReads_309t_120415w"
 
 
 4. Analysis of Dataset Anomalies.
 - The Code is located in the directory: "EM/DataGraph/SW_test.py"
-- The data set for this experiment is located in "datasets/QuantitativeCrowdsourcing/DouBanDatasets_SWTest" and "datasets/QuantitativeCrowdsourcing/GoodReadsDatasets_SWTest"
+- The dataset for this experiment is located in "datasets/QuantitativeCrowdsourcing/DouBanDatasets_SWTest" and "datasets/QuantitativeCrowdsourcing/GoodReadsDatasets_SWTest"
 
 
 5. Analysis of User Kindness Distribution.
@@ -75,22 +75,22 @@ The description of each file and column in each dataset is as follows:
 * **result_h.csv**: This file is the result of the code running, and we will put the result of the code running here to facilitate the relevant experiment. This file has nothing to do with the lab setup and is for my own use only.
 * **result_phi.csv**: This file is the result of the code running, and we will put the result of the code running here to facilitate the relevant experiment. This file has nothing to do with the lab setup and is for my own use only.
 * **result_R.csv**: This file is the result of the code running, and we will put the result of the code running here to facilitate the relevant experiment. This file has nothing to do with the lab setup and is for my own use only.
-* **t2lpd.csv**: This file is applied in part of the drawing code for the predicted values for each task. If you need to reproduce the implementation, you need to regenerate the file from the corresponding data set.
+* **t2lpd.csv**: This file is applied in part of the drawing code for the predicted values for each task. If you need to reproduce the implementation, you need to regenerate the file from the corresponding dataset.
 
 # More Detilas in Dataset Introduction
-All of our data set files in the folder datasets/QuantitativeCrowdsourcing, this folder has 7 subfolders, represent the 7 different data sets, and each has a markdown readme file folder, Used to explain the details of this folder data set. For ease of reading, I have organized the introduction documentation of these data sets as follows:
+All of our dataset files in the folder datasets/QuantitativeCrowdsourcing, this folder has 7 subfolders, represent the 7 different datasets, and each has a markdown readme file folder, Used to explain the details of this folder dataset. For ease of reading, I have organized the introduction documentation of these datasets as follows:
 ## Dataset DouBanDatasets/Douban_202t_269266w  Describption:
-This folder contains data sets crawled from Douban. 
-The folder Douban_202t_269266w is the raw data, and this naming means that the data structure in the data set in this folder contains 202 tasks and 269266 workers.
+This folder contains datasets crawled from Douban. 
+The folder Douban_202t_269266w is the raw data, and this naming means that the data structure in the dataset in this folder contains 202 tasks and 269266 workers.
 We collected and organized the long review information (1-5 points) of the Top 250 movies and the social relationship attributes between the commenting users. We also used the expert ratings of movies from metacritic as the ground truth for this dataset.
 
 ## Dataset DouBanDatasets_RedundancyCut Describption:
 ### Description of folder name:
-Take folder Douban_202t_110w_3r as an example. This name means that the folder stores the data set crawled from Douban.com. The data contains 202 tasks and 110 workers in total, and the task redundancy is close to 3. Other folder names have a similar meaning.
+Take folder Douban_202t_110w_3r as an example. This name means that the folder stores the dataset crawled from Douban.com. The data contains 202 tasks and 110 workers in total, and the task redundancy is close to 3. Other folder names have a similar meaning.
 ### Folder data source: 
-The data set of each folder is divided by the data set DouBanDatasets/Douban_202t_269266w total data set, we randomly select data from this total data set according to different redundancy, and then organize into a new data. For example, in the dataset Douban_202t_110w_3r, workers and their task labels were randomly selected from the dataset DouBanDatasets/Douban_202t_269266w according to the standard of task redundancy of 3, and then sorted into a new dataset. The tasks, workers, and annotations in this new dataset were extracted from DouBanDatasets/Douban_202t_269266w without any other modifications.
-### The use of this data set file in the experiment: 
-We use this data set in the Effectiveness on Groundtruth Inference with Varying Redundancy experiment part of the paper, and the results of the experiment come from this data set.
+The dataset of each folder is divided by the dataset DouBanDatasets/Douban_202t_269266w total dataset, we randomly select data from this total dataset according to different redundancy, and then organize into a new data. For example, in the dataset Douban_202t_110w_3r, workers and their task labels were randomly selected from the dataset DouBanDatasets/Douban_202t_269266w according to the standard of task redundancy of 3, and then sorted into a new dataset. The tasks, workers, and annotations in this new dataset were extracted from DouBanDatasets/Douban_202t_269266w without any other modifications.
+### The use of this dataset file in the experiment: 
+We use this dataset in the Effectiveness on Groundtruth Inference with Varying Redundancy experiment part of the paper, and the results of the experiment come from this dataset.
 
 ## Dataset DouBanDatasets_SWTest Describption:
 ### Description of folder name
@@ -99,28 +99,28 @@ Next, we process the resulting dataset Douban_7271w_0% and get ten datasets.
 the Shapiro-Wilk test is conducted for all label results of each worker,and the corresponding 𝑤 value for each worker is calculated.             The 𝑤 values are sorted in ascending order, and datasets are generated by continuously excluding workers with small 𝑤 values, at a 5% scale, leading to ten datasets.              For example, Douban_6906w_5% dataset means sort in ascending order of w values, excluding those achieved by the top 5% of the smallest workers.          Similarly, Douban_6543w_10% represents the values sorted in ascending order of w, excluding the top 10% of workers.
 Through this rule, we extract and sort out ten datasets from the original dataset Douban_7271w_0%, which have not been modified except the data size.
 ### Folder data source
-The dataset Douban_7271w_0% is extracted and collated from the dataset DouBanDatasets/Douban_202t_269266w. The ten data sets of Douban_6906w_5%~Douban_6906w_50% are obtained from the Douban_7271w_0% data set by continuously excluding the people with the lowest w value in proportion.
-### The use of this data set file in the experiment
+The dataset Douban_7271w_0% is extracted and collated from the dataset DouBanDatasets/Douban_202t_269266w. The ten datasets of Douban_6906w_5%~Douban_6906w_50% are obtained from the Douban_7271w_0% dataset by continuously excluding the people with the lowest w value in proportion.
+### The use of this dataset file in the experiment
 This Dataset was used in the experimental Analysis of Dataset Anomalies, figure: "Comparison of the Same Metric Changes across
 Different Datasets" represent the results of this experiment.
 
 ## Dataset GoodReadsDatasets/GoodReads_309t_120415w Describption:
-This folder contains data sets crawled from GoodReads. The folder GoodReads_309t_120415w is the raw data, 
-and this naming means that the data structure in the data set in this folder contains 309 tasks and 120415 workers.
+This folder contains datasets crawled from GoodReads. The folder GoodReads_309t_120415w is the raw data, 
+and this naming means that the data structure in the dataset in this folder contains 309 tasks and 120415 workers.
 We collected and organized some user reviews (1-5 points) from the 2022 Best Books list and the social relationship attributes between the commenting users. The ground truth for this dataset is the average rating of the authors.
 
 ## Dataset GoodReadsDatasets_RedundancyCut Describption:
 ### Description of folder name:
-Take folder GoodReads_309t_245w_3r as an example. This name means that the folder stores the data set crawled from https://goodreads.com. 
+Take folder GoodReads_309t_245w_3r as an example. This name means that the folder stores the dataset crawled from https://goodreads.com. 
 The data contains 309 tasks and 245 workers in total, and the task redundancy is close to 3. Other folder names have a similar meaning.
 ### Folder data source: 
-The data set of each folder is divided by the data set GoodReadsDatasets/GoodReads_309t_120415w total data set, 
-we randomly select data from this total data set according to different redundancy, and then organize into a new data. 
+The dataset of each folder is divided by the dataset GoodReadsDatasets/GoodReads_309t_120415w total dataset, 
+we randomly select data from this total dataset according to different redundancy, and then organize into a new data. 
 For example, in the dataset GoodReads_309t_245w_3r, workers and their task labels were randomly selected from the dataset GoodReads_309t_120415w 
 according to the standard of task redundancy of 3, and then sorted into a new dataset. 
 The tasks, workers, and annotations in this new dataset were extracted from GoodReads_309t_120415w without any other modifications.
-### The use of this data set file in the experiment: 
-We use this data set in the Effectiveness on Groundtruth Inference with Varying Redundancy experiment part of the paper,
+### The use of this dataset file in the experiment: 
+We use this dataset in the Effectiveness on Groundtruth Inference with Varying Redundancy experiment part of the paper,
 and the results of the experiment come from this dataset.
 
 ## Dataset GoodReadsDatasets_SWTest Describption:
@@ -138,8 +138,8 @@ For example, GoodReads_5415_309t_5% dataset means sort in ascending order of w v
 Through this rule, we extract and sort out ten datasets from the original dataset GoodReads_5702_309t_0%, which have not been modified except the data size.
 ### Folder data source
 The dataset GoodReads_5702_309t_0% is extracted and collated from the dataset GoodReads_309t_120415w.
-The ten data sets of GoodReads_5415_309t_5% ~ GoodReads_2850_308t_50% are obtained from the GoodReads_5702_309t_0% dataset by continuously excluding the people with the lowest w value in proportion.
-### The use of this data set file in the experiment
+The ten datasets of GoodReads_5415_309t_5% ~ GoodReads_2850_308t_50% are obtained from the GoodReads_5702_309t_0% dataset by continuously excluding the people with the lowest w value in proportion.
+### The use of this dataset file in the experiment
 This Dataset was used in the experimental Analysis of Dataset Anomalies, figure: "Comparison of the Same Metric Changes across
 Different Datasets" represent the results of this experiment.
 
