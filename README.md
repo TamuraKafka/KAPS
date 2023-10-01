@@ -11,6 +11,25 @@
 | KARS       | KARS Code           |
 | datasets   | All of the Datasets |
 
+## Dictionary Detials in KARS
+```
+KARS
+├─BaselineExperiment ----- This folder contains the code associated with baseline running
+│      LaunchBaseline.py ----- This file is a one-click script to launch all baseline code (except CTD), enter the data set and run this file to get the results of all baseline (except CTD) on the data set.
+│      result_baseline.txt ----- File storing baseline running results
+│      
+├─DataGraph ----- Figure Code: The code for drawing the experimental results into graphics is stored here: the running result data related to the experiment needs to be input into it to get the graphical result display of the experiment.
+│      data_3r_15r_dataset.py ----- Figure: KARS versus Baselines Comparative Experiment
+│      label_distribution.py ----- Figure: Label Distribution of Datasets
+│      model_bias.py ----- Figure:Theoretical Deviation and Other Deviations and Figure:Influence of Worker Preferences on Model Accuracy Across Different Datasets.
+│      SW_test.py ----- Figure:  Comparison of the Same Metric Changes across Different Datasets.
+│      
+└─Mine ----- KARS algorithm code
+        EM2.py ----- KARS algorithm code for all datasets(except twitter dataset)
+        EM_Twitter.py ----- KARS algorithm code for only twitter dataset
+        record.txt ----- running record
+        result.txt ----- running result
+```
 
 # Experiment Code
 All experiments that need to use the Kars algorithm need to use the experimental dataset, through the Kars algorithm to calculate the results, and then put the calculated results into the corresponding experimental code to draw the experimental results map. The datasets needed for each experiment and the drawing code for that experiment are as follows:
