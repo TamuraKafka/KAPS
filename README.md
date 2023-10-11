@@ -10,26 +10,26 @@ Through directory explanation, we can quickly understand the structure of the en
 | I_LFCount  | Baseline LFC Algorithm Code  |
 | PM_CRH     | Baseline CRH Algorithm Code  |
 | CTD        | Baseline CTD Algorithm Code  |
-| KARS       | KARS Algorithm Code          |
+| KAPS       | KAPS Algorithm Code          |
 | datasets   | All of the Datasets Files    |
 
-### KARS Dictionary Detials 
-The KARS algorithm is the algorithm we proposed in the paper. In order to adapt to different data set formats, we store two different forms of KARS algorithm codes in this directory. The core algorithms of the two codes are the same, but they are adapted to different data set formats.
+### KAPS Dictionary Detials
+The KAPS algorithm is the algorithm we proposed in the paper. In order to adapt to different data set formats, we store two different forms of KAPS algorithm codes in this directory. The core algorithms of the two codes are the same, but they are adapted to different data set formats.
 ```
-KARS
+KAPS
 ├─BaselineExperiment ----- This folder contains the code associated with baseline running
 │      LaunchBaseline.py ----- This file is a one-click script to launch all baseline code (except CTD), enter the dataset and run this file to get the results of all baseline (except CTD) on the dataset.
 │      result_baseline.txt ----- File storing baseline running results
 │      
 ├─DataGraph ----- Figure Code: The code for drawing the experimental results into graphics is stored here: the running result data related to the experiment needs to be input into it to get the graphical result display of the experiment.
-│      data_3r_15r_dataset.py ----- Figure: KARS versus Baselines Comparative Experiment
+│      data_3r_15r_dataset.py ----- Figure: KAPS versus Baselines Comparative Experiment
 │      label_distribution.py ----- Figure: Label Distribution of Datasets
 │      model_bias.py ----- Figure:Theoretical Deviation and Other Deviations and Figure:Influence of Worker Preferences on Model Accuracy Across Different Datasets.
 │      SW_test.py ----- Figure:  Comparison of the Same Metric Changes across Different Datasets.
 │      
-└─Mine ----- KARS algorithm code
-        EM2.py ----- KARS algorithm code for all datasets(except twitter dataset)
-        EM_Twitter.py ----- KARS algorithm code for only twitter dataset
+└─Mine ----- KAPS algorithm code
+        EM2.py ----- KAPS algorithm code for all datasets(except twitter dataset)
+        EM_Twitter.py ----- KAPS algorithm code for only twitter dataset
         record.txt ----- running record
         result.txt ----- running result
 ```
@@ -38,15 +38,15 @@ KARS
 
 -----
 # Experimental Code Introduction
-All experiments that need to use the KARS algorithm need to use the experimental data set, calculate the results through the KARS algorithm, and then put the calculation results into the corresponding experimental code to draw the experimental result graph. The dataset required for each experiment and the plotting code for that experiment are as follows:
+All experiments that need to use the KAPS algorithm need to use the experimental data set, calculate the results through the KAPS algorithm, and then put the calculation results into the corresponding experimental code to draw the experimental result graph. The dataset required for each experiment and the plotting code for that experiment are as follows:
 
 ## The process of obtaining experimental results：
 1. First we need to obtain the corresponding data set of the experiment. The data set of each experiment may be different.
-2. Second, we need to put the experimental data set into the KARS algorithm and other baseline algorithms to calculate the results.
-3. Third, we organized the results of the KARS algorithm and the result data of other baseline algorithms, and obtained the experimental result diagram through the drawing code, which is the diagram shown in the paper.
+2. Second, we need to put the experimental data set into the KAPS algorithm and other baseline algorithms to calculate the results.
+3. Third, we organized the results of the KAPS algorithm and the result data of other baseline algorithms, and obtained the experimental result diagram through the drawing code, which is the diagram shown in the paper.
 
 ## Algorithm code location and usage
-The KARS algorithm code is located in the folder "KARS/Mine/". If the data set is the Douban data set or the GoodReads data set, the "EM2.py" code is used for calculation. If you are using the Twitter data set, use the "EM_Twitter.py" code to calculate.
+The KAPS algorithm code is located in the folder "KAPS/Mine/". If the data set is the Douban data set or the GoodReads data set, the "EM2.py" code is used for calculation. If you are using the Twitter data set, use the "EM_Twitter.py" code to calculate.
 
 Then select the corresponding data set according to the specific experiment, and put the result data into the drawing code to get the experimental result graph.
 

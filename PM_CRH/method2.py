@@ -225,7 +225,7 @@ class CRH:
 
 
 ###################################
-# The above is the KARS method (a class)
+# The above is the KAPS method (a class)
 # The following are several external functions
 ###################################
 

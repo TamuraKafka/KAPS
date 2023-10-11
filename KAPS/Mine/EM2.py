@@ -90,7 +90,7 @@ class EM:
         with open('record.txt', 'a', encoding="utf-8") as f:
             f.write("__init__ 执行结束，执行时间为:" + str(endTime - startTime) + "秒\n")
 
-    ############################################################ KARS: 计算E步 ############################################################
+    ############################################################ KAPS: 计算E步 ############################################################
     # 计算w_j^k时，k值的范围不是任务j的k范围，而是列表k_values
     def update_wjk(self):
         ##### 先更新计算所有的ln[P(y_ij)],然后下面直接调用即可 #####
@@ -141,7 +141,7 @@ class EM:
         with open('record.txt', 'a', encoding="utf-8") as f:
             f.write("update_wjk 执行结束，执行时间为(不包括计算ln_P_y):" + str(end - start) + "秒\n")
 
-    ############################################################ KARS: 计算M步 ############################################################
+    ############################################################ KAPS: 计算M步 ############################################################
 
     # 更新所有k取值的phi_k
     def update_phik(self):
@@ -588,7 +588,7 @@ class EM:
         return a,R_Matrix,h,phi
 
     ########################################################################################################################
-    # The above is the KARS method (a class)
+    # The above is the KAPS method (a class)
     # The following are several external functions
     ########################################################################################################################
     def get_accuracy(self):
@@ -806,7 +806,7 @@ if __name__ == "__main__":
     ################################################################ 迭代运行并显示结果 ################################################################
     ###################### 单进程 单参数 迭代  ######################
 
-    # em = KARS(data_file=data_file, truth_file=truth_file, E_file=E_file, G_file=G_file, T_file=T_file, ALPHA=ALPHA, PHI_A=PHI_A, PHI_R=PHI_R, PHI_H=PHI_H,G_Size=G_Size, k_values=k_values, data_name=data_name,output_file_path=output_file_path)
+    # em = KAPS(data_file=data_file, truth_file=truth_file, E_file=E_file, G_file=G_file, T_file=T_file, ALPHA=ALPHA, PHI_A=PHI_A, PHI_R=PHI_R, PHI_H=PHI_H,G_Size=G_Size, k_values=k_values, data_name=data_name,output_file_path=output_file_path)
     #
     # em.run(iter=200)
 
@@ -824,7 +824,7 @@ if __name__ == "__main__":
     #     G_file = '../../datasets/QuantitativeCrowdsourcing/' + data_name + '/G.csv'
     #     T_file = '../../datasets/QuantitativeCrowdsourcing/' + data_name + '/T.csv'
     #     E_file = '../../datasets/QuantitativeCrowdsourcing/' + data_name + '/E.csv'
-    #     em = KARS(data_file=data_file, truth_file=truth_file, E_file=E_file, G_file=G_file, T_file=T_file, ALPHA=ALPHA, PHI_A=PHI_A, PHI_R=PHI_R, PHI_H=PHI_H,G_Size=G_Size, k_values=k_values, data_name=data_name,output_file_path=output_file_path)
+    #     em = KAPS(data_file=data_file, truth_file=truth_file, E_file=E_file, G_file=G_file, T_file=T_file, ALPHA=ALPHA, PHI_A=PHI_A, PHI_R=PHI_R, PHI_H=PHI_H,G_Size=G_Size, k_values=k_values, data_name=data_name,output_file_path=output_file_path)
     #     em.run(iter=200)
 
     ###################### 多进程 多参数 迭代  ######################
@@ -1131,7 +1131,7 @@ if __name__ == "__main__":
 
 
     ################################ 单元测试 ################################
-    # em = KARS(data_file=data_file, truth_file=truth_file, E_file=E_file, G_file=G_file, T_file=T_file, ALPHA=ALPHA,
+    # em = KAPS(data_file=data_file, truth_file=truth_file, E_file=E_file, G_file=G_file, T_file=T_file, ALPHA=ALPHA,
     #         PHI_A=PHI_A, PHI_R=PHI_R, PHI_H=PHI_H, k_values=k_values, data_name=data_name,
     #         output_file_path=output_file_path)
 

@@ -188,11 +188,11 @@ def AbsoluteError(data_name):
     ave2 = np.mean(data2)
 
     # ["#8ECFC9","#FFBE7A","#FA7F6F","#82B0D2"]
-    sns.kdeplot(data1, fill=True, color="#8ECFC9", label="KARS", alpha=0.7, ax=ax)
-    sns.kdeplot(data2, fill=True, color="#FA7F6F", label=r'KARS-$\bar{p}$', alpha=0.7, ax=ax)
+    sns.kdeplot(data1, fill=True, color="#8ECFC9", label="KAPS", alpha=0.7, ax=ax)
+    sns.kdeplot(data2, fill=True, color="#FA7F6F", label=r'KAPS-$\bar{p}$', alpha=0.7, ax=ax)
 
-    plt.axvline(ave1, color='#8ECFC9', linestyle='--', label='Average Error of KARS',lw=2)
-    plt.axvline(ave2, color='#FA7F6F', linestyle='--', label=r'Average Error of KARS-$\bar{p}$',lw=2)
+    plt.axvline(ave1, color='#8ECFC9', linestyle='--', label='Average Error of KAPS',lw=2)
+    plt.axvline(ave2, color='#FA7F6F', linestyle='--', label=r'Average Error of KAPS-$\bar{p}$',lw=2)
 
 
     ax.legend(fontsize=16)
